@@ -1,0 +1,170 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*START CSS STYLES*/
+
+:root{
+    --cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --dk-blue:  hsl(212, 21%, 14%);
+    --gray-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--cream);
+    margin: 0;
+    min-height: 125svh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    max-width: 375px;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mobile-img{
+    display: block;
+    width: 100%;
+}
+.desktop-img{
+    display: none;
+}
+
+.product-info{
+    margin: 25px;
+}
+
+.product{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--gray-blue);
+    padding-bottom: 15px;
+}
+
+h1{
+    font-family: 'Fraunces';
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.product-desc{
+    font-family: 'Montserrat';
+    color: var(--gray-blue);
+    padding-bottom: 15px;
+    line-height: 150%;
+}
+
+.prices{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.sale-price{
+    font-size: 2rem;
+    font-family: 'Fraunces';
+    font-weight: bold;
+    color: var(--cyan);
+    padding-right: 20px;
+}
+
+.full-price{
+    font-family: 'Montserrat';
+    text-decoration: line-through;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cyan);
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: var(--white);
+    outline: none;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    
+}
+
+.button img{
+    padding: 0 10px;
+}
+
+.button:hover{
+    background-color: darkslategrey;
+}
+
+@media screen and (min-width: 1280px) {
+    .mobile-img {
+        display: none;
+    }
+    .desktop-img{
+        display: block;
+        width: 100%;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        max-width: 550px;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
